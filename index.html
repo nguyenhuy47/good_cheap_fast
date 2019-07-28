@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngon bo re</title>
+</head>
+<body>
+<style>
+    .box{
+        width: 50px; height: 50px; background: #607d8b;
+    }
+</style>
+<input class="box" type="checkbox" id="good" onclick="goodClick()"><h1><label style="color: red">Good</label></h1><br>
+<input class="box" type="checkbox" id="cheap" onclick="cheapClick()"><h1><label style="color: green">Cheap</label></h1><br>
+<input class="box" type="checkbox" id="fast" onclick="fastClick()"><h1><label style="color: blue">Fast</label></h1><br>
+<script>
+    let goodCheck = document.getElementById("good");
+    let cheapCheck = document.getElementById("cheap");
+    let fastCheck = document.getElementById("fast");
+
+    function goodClick() {
+        if (goodCheck.checked == true) {
+            cheapCheck.checked = false;
+        }
+    }
+    function cheapClick() {
+        if (cheapCheck.checked == true) {
+            fastCheck.checked = false;
+        }
+    }
+
+    function fastClick() {
+        if (fastCheck.checked == true) {
+            goodCheck.checked = false;
+        }
+    }
+
+</script>
+
+</body>
+</html>
